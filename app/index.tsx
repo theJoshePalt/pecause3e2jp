@@ -1,15 +1,12 @@
-import { Text, View } from "react-native";
-
+import CustomText from "@/components/ui/CustomText";
+import "../Global.css";
+import { View } from "react-native";
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View className="bg-[#004719] w-screen h-screen">
+      <CustomText variant="large" dark={false}>
+        CAUSE
+      </CustomText>
     </View>
   );
 }
