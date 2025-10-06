@@ -22,14 +22,14 @@ export default function Index() {
         <Text className="text-3xl font-bold text-[#B8EDFF] mb-6">Sign Up</Text>
       
       <TextInput
-          className="w-full p-3 rounded-xl bg-[#8AE2FF] border-[#2ECBFF] mb-4"
+          className="w-full p-3 rounded-xl bg-[#8AE2FF] border border-[#00FFFF] mb-4"
           placeholder="Email"
           value={email}
           onChangeText={setEmail}
         />
 
         <TextInput
-          className="w-full p-3 rounded-xl bg-[#8AE2FF] border-[#2ECBFF] mb-6"
+          className="w-full p-3 rounded-xl bg-[#8AE2FF] border border-[#00FFFF] mb-6"
           placeholder="Password"
           secureTextEntry
           value={password}
@@ -43,6 +43,15 @@ export default function Index() {
           <Text className="text-[#002430] font-bold text-lg">Create Account</Text>
         </Pressable>
 
+
+        <View className="flex-row justify-between w-full p-3 items-center ">
+          <Text className="text-sm text-gray-300">No Account?</Text>
+          
+        </View>
+        <Pressable>
+            <Text className="text-sm text-[#007AA3] font-bold">Log in</Text>
+        </Pressable>
+        
       </View>
     </ImageBackground>
   );
