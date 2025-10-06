@@ -10,6 +10,7 @@ const CustomText = ({variant, dark, children}:CustomTextProps) => {
   return (
      <Text className={styleSelector(variant,dark)}>
         {children}
+        
     </Text>
  )
 }
@@ -19,7 +20,7 @@ function styleSelector(variant:any,dark:boolean){
     if(dark == true){
         style += "text-white "
     }else{
-        style += "text-[#0F626F] "
+        style += "text-[#5CB0FF] "
     }
     
     switch(variant){

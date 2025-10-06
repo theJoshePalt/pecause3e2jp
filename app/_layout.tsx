@@ -8,7 +8,7 @@ export default function RootLayout() {
         options={{
           title: "Bonjour",
           headerStyle: {
-            backgroundColor: "#007529",//color del fondo del encabezado.
+            backgroundColor: "#000911",//color del fondo del encabezado.
           },
           headerTintColor: "#fff",//color de las letras
           headerTitleStyle: {
