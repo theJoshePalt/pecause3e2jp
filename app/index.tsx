@@ -36,6 +36,13 @@ export default function Index() {
           onChangeText={setPassword}
         />
 
+        <Pressable
+          onPress={handleSignUp}
+          className="w-full bg-[#009DD1] p-3 items-center mb-4"
+        >
+          <Text className="text-[#002430] font-bold text-lg">Create Account</Text>
+        </Pressable>
+
       </View>
     </ImageBackground>
   );
