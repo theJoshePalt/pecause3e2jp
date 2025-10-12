@@ -1,6 +1,7 @@
 import "../Global.css";
 import { View, Text, TextInput, Pressable, ImageBackground, Alert } from "react-native";
 import React, { useEffect, useState } from "react";
+import { Link } from "expo-router";
 
 export default function Index() {
   const [unaVez, setUnaVez] = useState(true); 
@@ -26,7 +27,7 @@ export default function Index() {
     >
 
       <View className="bg-black/50 p-10 w-80 items-center shadow-xl">
-        <Text className="text-3xl font-bold text-[#B8EDFF] mb-6">Sign Up</Text>
+        <Text className="text-3xl font-bold text-[#B8EDFF] mb-6">Log In</Text>
       
         <TextInput
           className="w-full p-3 rounded-xl bg-[#8AE2FF] border border-[#007AA3] mb-4"
@@ -56,10 +57,16 @@ export default function Index() {
         </View>
 
         <Pressable  onPress={handleLogin}>
-            <Text className="text-sm text-[#00FFFF] font-bold">Log in</Text>
+            <Text className="text-sm text-[#00FFFF] font-bold">Sign up</Text>
         </Pressable>
-        
+
       </View>
+      
+      <Link href="/SettingsScreen" className="mt-2">
+        <Text className="text-[#007AA3] font-bold text-sm underline text-center">
+            Settings ⚙️
+        </Text>
+      </Link>
     </ImageBackground>
   );
 }
