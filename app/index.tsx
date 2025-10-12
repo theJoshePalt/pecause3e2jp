@@ -1,35 +1,42 @@
-import CustomText from "@/components/ui/CustomText";
 import "../Global.css";
-import { View, Text, TextInput, Pressable, Image, ImageBackground } from "react-native";
-import React, { useState } from "react";
+import { View, Text, TextInput, Pressable, ImageBackground, Alert } from "react-native";
+import React, { useEffect, useState } from "react";
 
 export default function Index() {
+  const [unaVez, setUnaVez] = useState(true); 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSignUp = () => {
-    console.log("Sign Up with:", email, password);
-    // Aquí iría la lógica de Firebase
+
+  const handleSignUp = () => {if (unaVez) {
+    Alert.alert("Cuenta creada");
+    setUnaVez(false); 
+  }
+  console.log("Ingresado con:", email, password);
+};
+
+  const handleLogin = () => {
+
   };
-  
+
   return (
     <ImageBackground 
       source={require("../assets/images/icon.png")}
-      className="w-screen h-screen flex justify-center items-center"
+      className="w-screen h-screen flex p-20 items-center"
       resizeMode="cover"
     >
 
       <View className="bg-black/50 p-10 w-80 items-center shadow-xl">
         <Text className="text-3xl font-bold text-[#B8EDFF] mb-6">Sign Up</Text>
       
-      <TextInput
-          className="w-full p-3 rounded-xl bg-[#8AE2FF] border border-[#00FFFF] mb-4"
+        <TextInput
+          className="w-full p-3 rounded-xl bg-[#8AE2FF] border border-[#007AA3] mb-4"
           placeholder="Email"
           value={email}
           onChangeText={setEmail}
         />
 
         <TextInput
-          className="w-full p-3 rounded-xl bg-[#8AE2FF] border border-[#00FFFF] mb-6"
+          className="w-full p-3 rounded-xl bg-[#8AE2FF] border border-[#007AA3] mb-6"
           placeholder="Password"
           secureTextEntry
           value={password}
@@ -45,11 +52,11 @@ export default function Index() {
 
 
         <View className="flex-row justify-between w-full p-3 items-center ">
-          <Text className="text-sm text-gray-300">No Account?</Text>
-          
+          <Text className="text-sm text-gray-300">No Account?</Text> 
         </View>
-        <Pressable>
-            <Text className="text-sm text-[#007AA3] font-bold">Log in</Text>
+
+        <Pressable  onPress={handleLogin}>
+            <Text className="text-sm text-[#00FFFF] font-bold">Log in</Text>
         </Pressable>
         
       </View>
