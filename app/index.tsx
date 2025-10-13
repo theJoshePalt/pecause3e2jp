@@ -51,7 +51,7 @@ export default function Index() {
           <Text className="text-[#002430] font-bold text-lg">Create Account</Text>
         </Pressable>
 
-
+        <View className="w-full items-center mt-2">
         <View className="flex-row justify-between w-full p-3 items-center ">
           <Text className="text-sm text-gray-300">No Account?</Text> 
         </View>
@@ -59,14 +59,17 @@ export default function Index() {
         <Pressable  onPress={handleLogin}>
             <Text className="text-sm text-[#00FFFF] font-bold">Sign up</Text>
         </Pressable>
-
-      </View>
+        </View>
       
-      <Link href="/SettingsScreen" className="mt-2">
-        <Text className="text-[#007AA3] font-bold text-sm underline text-center">
-            Settings ⚙️
-        </Text>
-      </Link>
+
+        <Link href="/HomeScreen">
+          <Text className="text-[#007AA3] font-bold text-sm underline mt-3">
+            Home
+          </Text>      
+        </Link>
+      
+      </View>
+
     </ImageBackground>
   );
 }
