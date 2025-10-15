@@ -18,11 +18,12 @@ const SettingsScreen = () => {
       <View>
         <Text className="text-[#00FFFF] text-2xl font-bold  text-center">Welcome to the Settings</Text>
       </View>
-
       <TouchableOpacity 
         onPress={() => {router.push('/HomeScreen');}} 
-        className="mt-2 bg-[#B8EEFF] px-6 py-3 rounded-xl shadow-md">
-          <Text className="text-[#007AA3] font-bold underline text-center text-sm">Return to Home</Text>
+        className="mt-2 bg-[#003647] px-6 py-3 rounded-xl shadow-md">
+          <Text className="text-[#5CD6FF] font-bold text-sm text-center">
+            Home
+          </Text>  
       </TouchableOpacity>
     </ImageBackground>
     </View>

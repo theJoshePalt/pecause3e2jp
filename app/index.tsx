@@ -26,6 +26,7 @@ export default function Index() {
 
   const handleLogin = () => {};
 
+
   return (
     <View 
           style={{ flex: 1, backgroundColor: 'black' }} 
@@ -38,7 +39,7 @@ export default function Index() {
       imageStyle={{ opacity: 0.6 }}
     >
 
-      <View className="bg-black/50 p-10 w-80 items-center shadow-xl">
+      <View className="flex-1 justify-center items-center w-full px-6">
         
         <AntDesign name="spotify" size={40} color="#2EFFFF" className="mb-3" />
         <Text className="text-3xl font-bold text-[#00FFFF] mb-7">SOUNDTY</Text>
@@ -74,13 +75,7 @@ export default function Index() {
         </View>
         </View>
       </View>
-      <TouchableOpacity 
-        onPress={() => {router.push('/HomeScreen');}} 
-        className="mt-2 bg-[#003647] px-6 py-3 rounded-xl shadow-md">
-        <Text className="text-[#5CD6FF] font-bold text-sm text-center">
-          Home
-        </Text>      
-      </TouchableOpacity>
+      
     </ImageBackground>
     </View>
   );
