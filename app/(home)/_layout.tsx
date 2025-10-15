@@ -2,32 +2,16 @@ import { Stack } from 'expo-router';
 
 const HomeLayout = () => {
   return (
-    <Stack screenOptions={{headerShown:true}}>
+    <Stack screenOptions={{headerShown:false}}>
 
       <Stack.Screen 
         name="HomeScreen" 
-        options={{ 
-          title: "Home" ,
-          headerStyle: {
-            backgroundColor: "#003647",//color del fondo del encabezado.
-          },
-          headerTintColor: "#fff",//color de las letras
-          headerTitleStyle: {
-            fontWeight: "bold",//tipo de letra del encabezado
-          },
+        options={{ title: "Home"
         }}
       />
       <Stack.Screen 
         name="SettingsScreen" 
-        options={{ 
-          title: "Settings",
-          headerStyle: {
-            backgroundColor: "#003647",//color del fondo del encabezado.
-          },
-          headerTintColor: "#fff",//color de las letras
-          headerTitleStyle: {
-            fontWeight: "bold",//tipo de letra del encabezado
-          },
+        options={{ title: "Configuraciones"
         }}
       />
     </Stack>

@@ -21,10 +21,15 @@ export default function Index() {
   };
 
   return (
+    <View 
+          style={{ flex: 1, backgroundColor: 'black' }} 
+          className="flex-1 justify-center items-center"
+        >
     <ImageBackground 
       source={require("../assets/images/icon.png")}
       className="w-screen h-screen flex p-20 items-center"
       resizeMode="cover"
+      imageStyle={{ opacity: 0.6 }}
     >
 
       <View className="bg-black/50 p-10 w-80 items-center shadow-xl">
@@ -55,11 +60,10 @@ export default function Index() {
         <View className="w-full items-center mt-2">
         <View className="flex-row justify-between w-full p-3 items-center ">
           <Text className="text-sm text-gray-300">No Account?</Text> 
-        </View>
-
-        <Pressable  onPress={handleLogin}>
+          <Pressable  onPress={handleLogin}>
             <Text className="text-sm text-[#00FFFF] font-bold">Sign up</Text>
-        </Pressable>
+          </Pressable>
+        </View>
         </View>
       
 
@@ -74,5 +78,6 @@ export default function Index() {
         </Text>      
       </TouchableOpacity>
     </ImageBackground>
+    </View>
   );
 }

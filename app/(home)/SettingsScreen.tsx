@@ -9,6 +9,12 @@ const SettingsScreen = () => {
       style={{ flex: 1, backgroundColor: 'black' }}
       className="flex-1 justify-center items-center"
       >
+    <ImageBackground
+          source={require("../../assets/images/icon.png")}
+          className="w-screen h-screen flex p-20 items-center "
+          resizeMode="cover"
+          imageStyle={{ opacity: 0.6 }}
+        >
       <View>
         <Text className="text-[#00FFFF] text-2xl font-bold  text-center">Welcome to the Settings</Text>
       </View>
@@ -18,7 +24,7 @@ const SettingsScreen = () => {
         className="mt-2 bg-[#B8EEFF] px-6 py-3 rounded-xl shadow-md">
           <Text className="text-[#007AA3] font-bold underline text-center text-sm">Return to Home</Text>
       </TouchableOpacity>
-    
+    </ImageBackground>
     </View>
   )
 }
