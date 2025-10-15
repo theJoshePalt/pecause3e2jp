@@ -25,13 +25,12 @@ const ProfileDetailes = () => {
       <Text className="text-[#ffffff] mb-6 font-bold ">vincentFabron@val.com</Text>
     
 
-      {/* Contenido */}
-      <View className="px-6 py-6">
       
+      <View className="px-6 py-6">
         {/* Botón Editar */}
         <TouchableOpacity 
-          className="mt-2 bg-[#003647] px-6 py-3 rounded-xl shadow-md">
-          <Text className="text-[#5CD6FF] font-bold text-sm text-center">
+          className="mt-2 bg-[#000000] border border-[#DADADA] px-6 py-3 rounded-xl shadow-md">
+          <Text className="text-[#DADADA] font-bold text-sm text-center">
             Edit profile
           </Text>
         </TouchableOpacity>
@@ -39,16 +38,16 @@ const ProfileDetailes = () => {
       {/* Opciones */}
       <TouchableOpacity 
         onPress={() => {router.push('/(home)/Playlist');}} 
-        className="mt-2 bg-[#433305] px-6 py-3 rounded-xl shadow-md">
-          <Text className="text-[#EFB810] font-bold text-sm text-center">
+        className="mt-2 bg-[#000000] border border-[#DADADA] px-6 py-3 rounded-xl shadow-md">
+          <Text className="text-[#DADADA] font-bold text-sm text-center">
             My Playlists
             </Text>
       </TouchableOpacity>
       
       <TouchableOpacity 
         onPress={() => {router.push("/SettingsScreen");}}
-        className="mt-2 bg-[#003647] px-6 py-3 rounded-xl shadow-md">
-          <Text className="text-[#5CD6FF] font-bold text-sm text-center">
+        className="mt-2 bg-[#000000] border border-[#DADADA] px-6 py-3 rounded-xl shadow-md">
+          <Text className="text-[#DADADA] font-bold text-sm text-center">
             Settings
           </Text>  
       </TouchableOpacity>
@@ -60,19 +59,7 @@ const ProfileDetailes = () => {
             Home
           </Text>  
       </TouchableOpacity>
-
-      {/* Cerrar sesión */}
-      <TouchableOpacity 
-        className="bg-[#450000] p-4 rounded-lg"
-        onPress={() => {router.push('/');}}
-      >
-        <Text className="text-[#EF1010] font-semibold text-center">
-          Log Out
-        </Text>
-      </TouchableOpacity>
       </View>
-     
-
     </View>
     
   </ImageBackground>

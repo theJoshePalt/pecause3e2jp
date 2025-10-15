@@ -4,17 +4,12 @@ import { router } from "expo-router";
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function Home() {
-  /*
-    MODIFICADO: He cambiado la propiedad 'color' por 'bgColor' y ahora contiene 
-    códigos de color hexadecimales como strings. 
-    ¡Ahora puedes poner aquí el color que tú quieras! He puesto un amarillo como querías.
-  */
   const playlists = [
-    { id: 1, name: ' ¡EXT4CÍS?', songs: 546, bgColor: '#FF0000' }, // Este es un color amarillo
-    { id: 2, name: ' CONCER7', songs: 8, bgColor: '#822EFF' },
-    { id: 3, name: ' JACKS8N', songs: 8, bgColor: '#3F009C' },
-    { id: 4, name: ' N16GA', songs: 147, bgColor: '#450000' },
-    { id: 5, name: ' D15CIPLINE', songs: 31, bgColor: '#1500FF' },
+    { id: 1, name: ' ¡EXT4CÍS?', songs: 546, bgColor: '#2ECEFF' }, // Este es un color amarillo
+    { id: 2, name: ' CONCER7', songs: 8, bgColor: '#00C3FF' },
+    { id: 3, name: ' JACKS8N', songs: 8, bgColor: '#00A0D1' },
+    { id: 4, name: ' N16GA', songs: 147, bgColor: '#007DA3' },
+    { id: 5, name: ' D15CIPLINE', songs: 31, bgColor: '#005A75' },
 
   ];
 
@@ -40,67 +35,36 @@ export default function Home() {
               </Text>
 
               <TouchableOpacity
-                className="bg-[#2EFFFF] px-8 py-3 rounded-2xl shadow-md"
+                className="bg-[#2EFFFF] px-8 py-3 rounded-2xl shadow-md mb-6"
                 onPress={() => alert("Playing your playlist")}
               >
                 <Text className="text-[#003747] font-bold text-lg">PLAY</Text>
               </TouchableOpacity>
+
+              <TouchableOpacity
+                className="bg-[#2EFFFF] px-8 py-3 rounded-2xl shadow-md mb-6"
+                onPress={() => { router.push('/(home)/Playlist'); }}
+              >
+                <Text className="text-[#003747] font-bold text-lg">PLAYLIST</Text>
+              </TouchableOpacity>
             </View>
-
-            <View>
-              <View className="flex-row justify-between items-center mb-4">
-                <Text className="text-white text-xl font-bold">Your Playlists</Text>
-                <TouchableOpacity>
-                  <Text 
-                    onPress={() => router.push("/Playlist")}
-                    className="text-[#B8EEFF] font-semibold">LINKS </Text>
-                </TouchableOpacity>
-              </View>
-
-              <View>
-                {playlists.map((playlist) => (
-                  <TouchableOpacity
-                    key={playlist.id}
-                    className="mb-4"
-                    onPress={() => {
-                      if (playlist.name === "Traumas (Basta)") {
-                        router.push("/Playlist");
-                      } else {
-                        alert(`Playing ${playlist.name} `);
-                      }
-                    }}
-                  >
-                    
-                    <View style={{ backgroundColor: playlist.bgColor }} className="rounded-lg p-4 flex-row items-center">
-                      <View className="bg-white/20 rounded-md p-3 self-start">
-                        <Text className="text-white font-bold text-xl">▶️</Text>
-                      </View>
-                      <View className="ml-4">
-                        <Text className="text-white font-semibold text-lg" numberOfLines={1}>
-                          {playlist.name}
-                        </Text>
-                        <Text className="text-gray-300 text-sm">
-                          {playlist.songs} songs
-                        </Text>
-                      </View>
-                    </View>
-                  </TouchableOpacity>
-                ))}
-              </View>
-            </View>
-
           </ScrollView>
         </View>
 
         <TouchableOpacity
           onPress={() => { router.push('/(home)/ProfileDetails'); }}
-          className="absolute top-16 right-5 bg-[#003647] p-3 "
+          className="absolute top-10 right-5 bg-[#003647] p-3 rounded-xl "
         >
           <Text className="text-[#B8EEFF] text-2xl">
             👤
           </Text>
         </TouchableOpacity>
-
+        <TouchableOpacity 
+          className="absolute top-10 left-5 mt-2 bg-[#433305] px-6 py-3 rounded-xl shadow-md border border-[#EFB810]">
+          <Text className="text-[#EFB810] font-bold text-sm text-center">
+            PREMIUM
+          </Text>
+      </TouchableOpacity>
       </ImageBackground>
     </View>
   );

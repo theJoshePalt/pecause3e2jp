@@ -10,28 +10,43 @@ export default function Playlist() {
   };
 
   // Lista de canciones
-  const songs: { id: number; title: string; link: string }[] = [
-    { id: 1, title: "¡EXT4CÍS?", link: "https://open.spotify.com/playlist/5SJGicsspRIbAAKOWbshnf" },
-    { id: 2, title: "CONCER7", link: "https://open.spotify.com/playlist/5FDO6zFACyKwve7O8Bg7k3" },
-    { id: 3, title: "JACKS8N", link: "https://open.spotify.com/playlist/56PU7eEd1AaGaCmm125z2g" },
-    { id: 4, title: "N16GA", link: "https://open.spotify.com/playlist/2nFinfkLsEqsNxubDKR6nG" },
-    { id: 5, title: "D15CIPLINE", link: "https://open.spotify.com/playlist/5LMfZe0KV4J8mwzlmdKWPf" },
+  const playlists = [
+    { id: 1, name: '¡EXT4CÍS?', songs: 546, bgColor: '#2ECEFF', link: "https://open.spotify.com/playlist/5SJGicsspRIbAAKOWbshnf" },
+    { id: 2, name: 'CONCER7', songs: 8, bgColor: '#00C3FF', link: "https://open.spotify.com/playlist/5FDO6zFACyKwve7O8Bg7k3" },
+    { id: 3, name: 'JACKS8N', songs: 8, bgColor: '#00A0D1', link: "https://open.spotify.com/playlist/56PU7eEd1AaGaCmm125z2g" },
+    { id: 4, name: 'N16GA', songs: 147, bgColor: '#007DA3', link: "https://open.spotify.com/playlist/2nFinfkLsEqsNxubDKR6nG" },
+    { id: 5, name: 'D15CIPLINE', songs: 31, bgColor: '#005A75', link: "https://open.spotify.com/playlist/5LMfZe0KV4J8mwzlmdKWPf" }
   ];
 
   return (
     <View style={{ flex: 1, backgroundColor: '#00141A' }}>
       
       <ScrollView className="px-6 mt-6">
-        {songs.map((song) => (
-          <TouchableOpacity
-            key={song.id}
-            onPress={() => abrirLink(song.link)}
-            className="bg-blue-900/60 p-4 mb-3 border border-[#8AFFFF] rounded-lg"
-          >
-            <Text className="text-white text-lg font-semibold">{song.title}</Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
+  {playlists.map((playlist) => (
+    <TouchableOpacity
+      key={playlist.id}
+      onPress={() => abrirLink(playlist.link)}
+      className="mb-4"
+    >
+      <View
+        style={{ backgroundColor: playlist.bgColor }}
+        className="rounded-lg p-4 flex-row items-center"
+      >
+        <View className="bg-white/20 rounded-md p-3 self-start">
+          <Text className="text-black font-bold text-2xl">▶</Text>
+        </View>
+        <View className="ml-4">
+          <Text className="text-white font-semibold text-lg" numberOfLines={1}>
+            {playlist.name}
+          </Text>
+          <Text className="text-gray-300 text-sm">
+            {playlist.songs} songs
+          </Text>
+        </View>
+      </View>
+    </TouchableOpacity>
+  ))}
+
 
 
     <TouchableOpacity 
@@ -41,6 +56,8 @@ export default function Playlist() {
             ↩ Home
           </Text>  
       </TouchableOpacity>
+
+      </ScrollView>
     </View>
   );
 }
