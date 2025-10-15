@@ -52,7 +52,7 @@ export default function Home() {
         </View>
 
         <TouchableOpacity
-          onPress={() => { router.push('/(home)/ProfileDetails'); }}
+          onPress={() => { router.push('/(home)/(tabs)/ProfileDetails'); }}
           className="absolute top-10 right-5 bg-[#003647] p-3 rounded-xl "
         >
           <Text className="text-[#B8EEFF] text-2xl">
