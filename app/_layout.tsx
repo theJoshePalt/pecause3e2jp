@@ -6,16 +6,15 @@ export default function RootLayout() {
       <Stack.Screen
         name="index"
         options={{
-          title: "Bonjour",
-          headerStyle: {
-            backgroundColor: "#003647",//color del fondo del encabezado.
-          },
-          headerTintColor: "#fff",//color de las letras
-          headerTitleStyle: {
-            fontWeight: "bold",//tipo de letra del encabezado
-          },
-          
+          headerShown: false,
         }}
+      />
+
+      <Stack.Screen
+        name="(home)"
+        options ={{
+          headerShown: false,
+          }}
       />
     </Stack>
   );

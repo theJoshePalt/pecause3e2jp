@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text ,TouchableOpacity , ImageBackground} from "react-native";
+import { View, Text ,TouchableOpacity , ImageBackground, ScrollView  } from "react-native";
 import { router } from "expo-router";
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function Home() {
+
   return (
     <View 
       style={{ flex: 1, backgroundColor: 'black' }} 
@@ -15,12 +16,14 @@ export default function Home() {
       resizeMode="cover"       
     >
       
+
+
       <TouchableOpacity 
-        onPress={() => {router.push('/SettingsScreen');}} 
-        className="absolute top-10 right-5 bg-[#007DA3] px-3 py-2 shadow-md"
+        onPress={() => {router.push('/(home)/ProfileDetails');}} 
+        className="absolute top-20 right-5 bg-[#003647] px-3 py-2 shadow-md"
       >
         <Text className="text-[#B8EEFF] font-bold text-lg text-center ">
-          ⚙️
+          👤
         </Text>
       </TouchableOpacity>
 
@@ -43,6 +46,7 @@ export default function Home() {
           <Text className="text-[#003747] font-bold text-lg">PLAY</Text>
         </TouchableOpacity>
       </View>
+
     </ImageBackground>
     </View>
   );
