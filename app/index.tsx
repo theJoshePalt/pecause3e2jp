@@ -16,7 +16,7 @@ export default function Index() {
     return;
   }
   if (unaVez) {
-    Alert.alert("Cuenta creada");
+    Alert.alert("Lets goo");
     setUnaVez(false);
   }
 
@@ -36,12 +36,12 @@ export default function Index() {
       source={require("../assets/images/icon.png")}
       className="w-screen h-screen flex p-20 items-center"
       resizeMode="cover"
-      imageStyle={{ opacity: 0.6 }}
+      imageStyle={{ opacity: 0.7 }}
     >
 
       <View className="flex-1 justify-center items-center w-full px-6">
         
-        <AntDesign name="spotify" size={40} color="#2EFFFF" className="mb-3" />
+        <AntDesign name="spotify" size={60} color="#2EFFFF" className="mb-3" />
         <Text className="text-3xl font-bold text-[#00FFFF] mb-7">SOUNDTY</Text>
       
         <TextInput

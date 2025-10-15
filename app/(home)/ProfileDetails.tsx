@@ -37,8 +37,12 @@ const ProfileDetailes = () => {
         </TouchableOpacity>
 
       {/* Opciones */}
-      <TouchableOpacity className="mt-2 bg-[#433305] px-6 py-3 rounded-xl shadow-md">
-      <Text className="text-[#EFB810] font-bold text-sm text-center">Mis Playlists</Text>
+      <TouchableOpacity 
+        onPress={() => {router.push('/(home)/Playlist');}} 
+        className="mt-2 bg-[#433305] px-6 py-3 rounded-xl shadow-md">
+          <Text className="text-[#EFB810] font-bold text-sm text-center">
+            My Playlists
+            </Text>
       </TouchableOpacity>
       
       <TouchableOpacity 
