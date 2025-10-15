@@ -25,7 +25,7 @@ export default function Home() {
       </TouchableOpacity>
 
       <View 
-        className="top-32 justify-center items-center bg-black/50 p-10 w-80 shadow-xl">
+        className="top-32 justify-center items-center bg-black/50 p-10 w-80 ">
 
         <Text className="text-[#00141A] text-xl font-bold mb-2 justify-center items-center">WELCOME TO </Text>
         <Text className="text-5xl font-bold text-[#00FFFF] mb-7">SOUNDTY</Text>
