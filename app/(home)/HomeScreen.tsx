@@ -19,7 +19,7 @@ export default function Home() {
         onPress={() => {router.push('/SettingsScreen');}} 
         className="absolute top-10 right-5 bg-[#007DA3] px-3 py-2 shadow-md"
       >
-        <Text className="text-[#B8EEFF] font-bold text-lg underline text-center ">
+        <Text className="text-[#B8EEFF] font-bold text-lg text-center ">
           ⚙️
         </Text>
       </TouchableOpacity>
